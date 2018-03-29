@@ -1,3 +1,3 @@
-require('cp');
+require('commonLogic');
 $(() => {
 });

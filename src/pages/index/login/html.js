@@ -1,8 +1,8 @@
-const config = require('configModule');
-const noJquery = require('withoutJqueryModule');
-const content = require('./templates/main.ejs');
-const layout = require('layout-without-nav');
-const dirsConfig = config.DIRS;
+const config         = require('devOnlineSwitchModule');
+const noJquery       = require('linkPathUtilModule');
+const content        = require('./templates/main.ejs');
+const layout         = require('layoutWithoutNav');
+const dirsConfig     = config.DIRS;
 
 const loginBoxHtml = require('./templates/login-box.ejs')({
   constructInsideUrl: noJquery.constructInsideUrl,

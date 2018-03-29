@@ -1,9 +1,9 @@
 // require('bootstrap/dist/css/bootstrap.min.css');
-require('iconfontDir/iconfont.css');
+require('fontsDir/iconfont.css');
 require('lessDir/base.less');
 require('metisMenu/metisMenu.min');
 require('bootstrap/dist/js/bootstrap.min.js');
-require('vendorDir/promise.min');
+require('vendorDir/promise.min.js');
 
 $(() => {
   $('#side-menu').metisMenu();
@@ -42,10 +42,4 @@ $(() => {
     }
   })();
 
-  /* 事件绑定 开始 */
-
-  /* 事件绑定 结束 */
-
-  /* 各种定时器 开始 */
-  /* 各种定时器 结束 */
 });

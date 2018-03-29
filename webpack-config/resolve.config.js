@@ -1,40 +1,42 @@
-var path = require('path');
-var dirVars = require('./base/dir-vars.config.js');
-module.exports = {
-  // 模块别名的配置，为了使用方便，一般来说所有模块都是要配置一下别名的
-  alias: {
-    /* 各种目录 */
-    iconfontDir: path.resolve(dirVars.publicDir, 'iconfont/'),
-    configDir: dirVars.configDir,
-    vendorDir: dirVars.vendorDir,
+const path = require('path');
+const paths = require('./base/paths.config.js');
 
-    /* vendor */
-    /* bootstrap 相关 */
-    metisMenu: path.resolve(dirVars.vendorDir, 'metisMenu/'),
+const configResolve = {
 
-    /* libs */
-    withoutJqueryModule: path.resolve(dirVars.libsDir, 'without-jquery.module'),
-    routerModule: path.resolve(dirVars.libsDir, 'router.module'),
+	// 模块别名的配置，为了使用方便，一般来说所有模块都是要配置一下别名的
+	alias: {
+		/* 各种目录 */
+		fontsDir                     : path.resolve(paths.publicResourceDir, 'fonts/'),
+		configDir                    : paths.configDir,
+		vendorDir                    : paths.vendorDir,
 
-    libs: path.resolve(dirVars.libsDir, 'libs.module'),
+		/* vendor */
+		/* bootstrap 相关 */
+		metisMenu                    : path.resolve(paths.vendorDir, 'metisMenu/'),
 
-    /* less */
-    lessDir: path.resolve(dirVars.publicDir, 'less'),
+		/* libs */
+		linkPathUtilModule           : path.resolve(paths.utilsDir, 'linkPathUtil.module.js'),
 
-    /* components */
+		utils                        : path.resolve(paths.utilsDir, 'utils.module.js'),
 
-    /* layout */
-    layout: path.resolve(dirVars.layoutDir, 'layout/html'),
-    'layout-without-nav': path.resolve(dirVars.layoutDir, 'layout-without-nav/html'),
+		/* less */
+		lessDir                      : path.resolve(paths.publicResourceDir, 'less'),
 
-    /* logic */
-    cm: path.resolve(dirVars.logicDir, 'common.module'),
-    cp: path.resolve(dirVars.logicDir, 'common.page'),
+		/* components */
 
-    /* config */
-    configModule: path.resolve(dirVars.configDir, 'common.config'),
-  },
+		/* layout */
+		layout                       : path.resolve(paths.layoutDir, 'layout/html.js'),
+		layoutWithoutNav             : path.resolve(paths.layoutDir, 'layout-without-nav/html.js'),
 
-  // 当require的模块找不到时，尝试添加这些后缀后进行寻找
-  extensions: ['.js', '.css', '.less'],
+		/* logic */
+		commonLogic                  : path.resolve(paths.logicDir, 'common.page.js'),
+
+		/* config */
+		devOnlineSwitchModule        : path.resolve(paths.configDir, 'devOnlineSwitch.config.js'),
+	},
+
+	// 当require的模块找不到时，尝试添加这些后缀后进行寻找
+	extensions                       : ['.js', '.css', '.less'],
 };
+
+module.exports = configResolve;

@@ -1,3 +1,5 @@
+ESLint暂时先不用
+
 # webpack-seed
 
 ## 注意

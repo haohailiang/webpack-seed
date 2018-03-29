@@ -1,4 +1,4 @@
-require('cp');
+require('commonLogic');
 $(() => {
 
 });
